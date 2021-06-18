@@ -1,4 +1,3 @@
-import Adafruit_DHT
 import sqlite3
 
 conn = sqlite3.connect('/home/pi/apps/dht11/dht.db')
