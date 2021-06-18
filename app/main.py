@@ -4,7 +4,7 @@ from sensors.humidity_temperature import get_humidity_and_temperature
 from fastapi import FastAPI
 import json
 
-config_file = open("./config.json")
+config_file = open("/home/pi/apps/server/app/config.json")
 config = json.load(config_file)
 app = FastAPI()
 config_file.close()
