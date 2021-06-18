@@ -1,0 +1,10 @@
+{
+	"name": "piz02",
+	"room": "office",
+	"apps": {
+		"dht": {
+			"enabled": true,
+			"data": "/home/pi/apps/dht11/dht.db"
+		}
+	}
+}
