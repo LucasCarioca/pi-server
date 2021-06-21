@@ -12,7 +12,6 @@ config_file.close()
 
 @app.get("/")
 def get_node_info():
-    #humidity, temperature = get_humidity_and_temperature()
     return {"server": config["name"], "room": config["room"]}
 
 @app.get("/climate")
