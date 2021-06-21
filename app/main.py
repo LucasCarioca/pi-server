@@ -28,5 +28,12 @@ def get_node_config():
 def reboot_node():
     os.system("sudo reboot")
 
+
+@app.get("/update")
+def update_software():
+    os.system("cd /home/pi/apps/dht11/ && git pull && cd ../server && git pull")
+    os.system("sudo reboot")
+
+
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=8000, log_level="info")
