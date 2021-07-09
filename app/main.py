@@ -14,6 +14,12 @@ config_file.close()
 def get_node_info():
     return {"server": config["name"], "room": config["room"]}
 
+@app.get("/api/v1/health")
+def health():
+    return {
+        "message": "up"
+    }
+
 @app.get("/climate")
 def get_node_climate():
     temp, humidity = get_humidity_and_temperature()
